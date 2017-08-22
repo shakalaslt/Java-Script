@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
 </head>
 <body>
     <div class="container-fluid">
@@ -16,6 +17,7 @@
     <div class="container">
 	    <div class="row">
 	    	<div class="col left">
+<<<<<<< HEAD
 		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_1">1</div>
 		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_2">2</div>
 		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_3">3</div>
@@ -28,6 +30,20 @@
 	    	</div>
 	    	<div class="col right">
 	    	   
+=======
+		    	<div class="col-sm-auto inner" id="rezultatas">1</div>
+		    	<div class="col-sm-auto inner" id="rezultatas">2</div>
+		    	<div class="col-sm-auto inner" id="rezultatas">3</div>
+	    		<div class="col-sm-auto inner" id="rezultatas">4</div>
+	    		<div class="col-sm-auto inner" id="rezultatas">5</div>
+	    		<div class="col-sm-auto inner" id="rezultatas">6</div>
+	    		<div class="col-sm-auto inner" id="rezultatas">7</div>
+	    		<div class="col-sm-auto inner" id="rezultatas">8</div>
+	    		<div class="col-sm-auto inner" id="rezultatas">9</div>
+	    	</div>
+	    	<div class="col right">
+	    	    
+>>>>>>> 169ff353d21940383a58c8e16d0ed7275e61661d
 	    		<button onclick="calc()" class="btn btl-lg btn-outline-dark">Pakeisti atsitiktinį langelį</button>
 	    	</div>
 	    </div>
@@ -44,9 +60,15 @@
 	    suma=Math.round(Math.random() *9);
 
 	    
+<<<<<<< HEAD
 		document.getElementById("kvadratas_" + suma).innerHTML ="Rezultatas yra " + suma ;
 		// "Rezultatas yra " + suma;
 		document.getElementById('kvadratas_' + suma).style.backgroundColor = "red";
+=======
+
+		document.getElementById("rezultatas"). innerHTML = "Rezultatas yra " + suma;
+		document.getElementById('rezultatas').style.backgroundColor = "red";
+>>>>>>> 169ff353d21940383a58c8e16d0ed7275e61661d
 	}
     </script>
 
