@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Namu darbas</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
@@ -15,20 +16,19 @@
     <div class="container">
 	    <div class="row">
 	    	<div class="col left">
-		    	<div class="col-sm-auto inner spacing" id="rezultatas">1</div>
-		    	<div class="col-sm-auto inner spacing" id="rezultatas">2</div>
-		    	<div class="col-sm-auto inner spacing" id="rezultatas">3</div>
-	    		<div class="col-sm-auto inner spacing" id="rezultatas">4</div>
-	    		<div class="col-sm-auto inner spacing" id="rezultatas">5</div>
-	    		<div class="col-sm-auto inner spacing" id="rezultatas">6</div>
-	    		<div class="col-sm-auto inner spacing" id="rezultatas">7</div>
-	    		<div class="col-sm-auto inner spacing" id="rezultatas">8</div>
-	    		<div class="col-sm-auto inner spacing" id="rezultatas">9</div>
+		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_1">1</div>
+		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_2">2</div>
+		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_3">3</div>
+	    		<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_4">4</div>
+	    		<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_5">5</div>
+	    		<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_6">6</div>
+	    		<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_7">7</div>
+	    		<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_8">8</div>
+	    		<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_9">9</div>
 	    	</div>
 	    	<div class="col right">
-	    	    <input id="a" class="form-control" type="text" name="a">
-			 	<input id="b" class="form-control" type="text" name="b">
-	    		<button onclick="calc()" class="btn btl-lg btn-outline-dark">GO</button>
+	    	   
+	    		<button onclick="calc()" class="btn btl-lg btn-outline-dark">Pakeisti atsitiktinį langelį</button>
 	    	</div>
 	    </div>
     	
@@ -44,9 +44,9 @@
 	    suma=Math.round(Math.random() *9);
 
 	    
-
-		document.getElementById("rezultatas"). innerHTML = "Rezultatas yra " + suma;
-		document.getElementById('rezultatas').style.color = "red";
+		document.getElementById("kvadratas_" + suma).innerHTML ="Rezultatas yra " + suma ;
+		// "Rezultatas yra " + suma;
+		document.getElementById('kvadratas_' + suma).style.backgroundColor = "red";
 	}
     </script>
 

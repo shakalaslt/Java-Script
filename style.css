@@ -16,12 +16,14 @@
 	background-color: gray;
 	color: orange;
 }
-#rezultatas{
+.rezultatas{
 	padding: 10px;
-	margin: 5px;
+	
 	border:1px solid orange;
 	font-size: 30px; <!-- dydis srifto -->
 	float: left;
+    margin: 10px;
+	
 	
 }
 .spacing{
