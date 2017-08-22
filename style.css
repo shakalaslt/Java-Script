@@ -2,11 +2,14 @@
 	background: orange;
 	color: black;
 	padding: 50px;
+
 }
 .left {
 	padding: 10px;
 	background-color: black;
 	color: orange;
+	float: left;
+
 }
 .right{
 	padding: 10px;
@@ -17,5 +20,10 @@
 	padding: 10px;
 	margin: 5px;
 	border:1px solid orange;
-	font-size: 40px; <!-- dydis srifto -->
+	font-size: 30px; <!-- dydis srifto -->
+	float: left;
+	
+}
+.spacing{
+	padding: 20px;
 }
