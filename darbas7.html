@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Namu darbas</title>
+<head>darbas7</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -15,9 +14,13 @@
     	</div>
     </div>
     <div class="container">
+        <div class="row">
+        	<div id="lucky_numbers"> skaiciai</div>
+        </div>
 	    <div class="row">
-	    	<div class="col left">
+	    	<div class="col-10 left">
 
+                <div class="col-sm-auto inner spacing rezultatas" id="kvadratas_1">0</div> 
 		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_1">1</div>
 		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_2">2</div>
 		    	<div class="col-sm-auto inner spacing rezultatas" id="kvadratas_3">3</div>
@@ -33,10 +36,10 @@
 
 		    
 	    	
-	    	<div class="col right">
+	    	<div class="col-2 right">
 	    	    
 
-	    		<button onclick="calc()" class="btn btl-lg btn-outline-dark">Pakeisti atsitiktinį langelį</button>
+	    		<button onclick="get_number()" class="btn btl-lg btn-outline-dark">Rinktis</button>
 	    	</div>
 	    </div>
     	
@@ -45,27 +48,46 @@
     	
     	
 
-    	function calc() {
+    	function get_number() {
+    		clear_table()
 	
-	    var suma;
+	    var skaicius;
+	    var gameover = false;
 
-	    suma=Math.floor(Math.random() * 9 + 1);
+	    if (!gameover)
+
+	    skaicius=Math.floor(Math.random() * 10);
+	    document.getElementById(skaicius).style.backgroundColor = "red";
 
 	    //ciklas foor
-	    for (var i =  1; i<9; i++) {
-
-	    	 document.getElementById('kvadratas_' + i).style.backgroundColor = "grey";
+	   lucky.push(skaicius);
+	   document.getElementById('lucky_numbers').innerHTML = lucky;
+	   check_gameover()
 	    	
 	    }
-	   
+	   function clear_table(){
 
-		document.getElementById("kvadratas_" + suma).style.backgroundColor = "red";
+		 for (var i =  0; i<9; i++) {
+
+	    	 document.getElementById('kvadratas_' + i).style.backgroundColor = "grey";
+	
 		
-		
+	    }
 
 
-		
-	}
+	    function check_gameover() {
+            if (lucky.length < 8) {
+            	//zaidimas tesiasi
+             } else {
+                 // zaidiams baigiasi
+                 alert ('game is over');
+                 gameover = true;
+             }
+
+            }
+
+
+	    }
     </script>
 
 </body>
