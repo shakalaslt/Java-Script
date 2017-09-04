@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6 Paskaita</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row head">
+			<h1>JavaScript</h1>
+		</div>
+	</div>
+	<div class="container">
+	<div class="row">
+	 <div class="col-2" id="a">
+	 A
+		
+	 </div>
+	 <div class="col-10">
+		
+	 </div>
+	</div>
+		<div class="row">
+			<div id="lucky_numbers">None</div>
+		</div>
+		<div class="row">
+			<div class="col-10 left">
+				<div class="lang" id="0">0</div>
+				<div class="lang" id="1">1</div>
+				<div class="lang" id="2">2</div>
+				<div class="lang" id="3">3</div>
+				<div class="lang" id="4">4</div>
+				<div class="lang" id="5">5</div>
+				<div class="lang" id="6">6</div>
+				<div class="lang" id="7">7</div>
+				<div class="lang" id="8">8</div>
+				<div class="lang" id="9">9</div>
+			</div>
+			<div class="col-2 right text-center">
+				<button onclick="get_number()" class="btn btn-lg btn-outline-dark">GO!</button> <br /><br />
+				<button onclick="new_game()" class="btn btn-lg btn-outline-success">New game</button>
+			</div>
+		</div>
+	</div>
+	<!-- KOMENTARAS -->
+</body>
+</html>	
+
+<script>
+var lucky = [];
+var ticket = [];
+var gameover = false;
+var div_ln = document.getElementById('lucky_numbers');
+function get_number() {
+	if (!gameover) { // gameover != true
+		clear_table();
+		var skaicius;
+		skaicius = Math.floor(Math.random() * 10);
+		document.getElementById(skaicius).style.backgroundColor = "red";
+		lucky.push(skaicius);
+		div_ln.innerHTML = lucky;
+
+	}
+	check_gameover();
+}
+function clear_table() { 
+	for (var i  = 0; i <= 9; i++) {
+		document.getElementById(i).style.backgroundColor = "white";
+	}
+}
+function check_gameover() {
+	if (lucky.length < 8) {
+		// zaidimas tesiasi
+	} else {
+		alert("Game is over!");
+		gameover = true;
+	}
+}
+function new_game() {
+	if (gameover) {
+		gameover = false;
+		lucky = [];
+		div_ln.innerHTML = "You are starting a new game.";
+		clear_table()
+	} else {
+		alert("Game is not yet over!");
+	}
+	
+}
+function new_ticket() {
+	ticket=[];
+	for (var x =0; x <=8; x++) {
+
+		skaicius = Math.floor(Math.random() * 10);
+		
+		ticket.push(skaicius);
+	}
+
+
+}
+</script>

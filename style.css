@@ -8,7 +8,7 @@
 	padding: 10px;
 	background-color: black;
 	color: orange;
-	float: left;
+	
 
 }
 .right{
@@ -16,12 +16,29 @@
 	background-color: gray;
 	color: orange;
 }
-#rezultatas{
+.rezultatas{
 	padding: 10px;
-	margin: 5px;
+	
 	border:1px solid orange;
-	font-size: 30px; <!-- dydis srifto -->
+	font-size: 40px; <!-- dydis srifto -->
 	float: left;
+    margin: 10px;
+    background-color: grey;
 	
 	
+	
+}
+#lucky_numbers{
+
+color: white;
+	
+	border:1px solid black;
+	font-size: 40px; <!-- dydis srifto -->
+	float: left;
+    margin: 10px;
+    background-color: black;
+    padding: 20px;
+	
+
+
 }
