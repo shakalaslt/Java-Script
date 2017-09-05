@@ -24,16 +24,16 @@
 	}
 
 	if ($kazkos_parametras <= +5 ){
-		return $kazkos_parametras . " salta" ;
+		return $kazkos_parametras . " Šalta" ;
 	}
 	if ($kazkos_parametras <= +20 ){
-		return $kazkos_parametras . " silta" ;
+		return $kazkos_parametras . " Šilta" ;
 	}
 	if ($kazkos_parametras <= +25 ){
-		return $kazkos_parametras . " karsta" ;
+		return $kazkos_parametras . " Karšta" ;
 	}
 	if ($kazkos_parametras > +25 ){
-		return $kazkos_parametras . " labai karsta" ;
+		return $kazkos_parametras . " Labai karšta" ;
 	}
 	
 }
