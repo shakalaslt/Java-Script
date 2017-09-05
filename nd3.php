@@ -19,7 +19,7 @@ for ($i=-30; $i <=35 ; $i+=3) {
 	echo "<tr><td>" . $i . "</td><td>". rezultatas($i) ."</td></tr>";
 }
 echo "</table>";
-
+gera
 	
 // echo  microtime() - $start;
 ?>
